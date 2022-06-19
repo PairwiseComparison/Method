@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" type="text/css" href="styles.css">
 		
 		<script>
 		let projectName;
@@ -211,7 +211,7 @@
 			testerCount=1;
 			console.log("끝")
 			document.getElementById('testerInput').innerHTML = `Result`;
-			resultScreenOut = `<table style="width: 50%;" > <caption> ${projectName}</caption> <Tr> <th> Name </th>	`;
+			resultScreenOut = `<h3 class="mt-4" style="width: 50%;"><center> ${projectName}</center></h3> <table class="dataTable-table" style="width: 50%;" >  <Tr> <th> Name </th>	`;
 			
 			for (z=0; z<subjectList.length ; z++){
 				resultScreenOut += `<th>${subjectList[z]}</th>`;
@@ -450,23 +450,33 @@
 		
 	</head>
 	<body>
-		<div class="title">
+		<div class="container-fluid px-4">
 			<p>
-				Project Name
-				<input type="text" id="projectName" value="ABC Project">  
+				<h1 class="mt-4">Project Name</h1>
 			</p>
+				<div class="input-group breadcrumb mb-4">
+					<input type="text" id="projectName" value="ABC Project">  
+				</div>
 			<div>
-				Number of items to compare
-				<input id="subjectNum" type="range" min="2" max="10" step="1" value="1" oninput="document.getElementById('subShow').innerHTML=this.value;" style="width: 50%;">
-        		<span id="subShow">2</span>
-				<br>
-		
-				
-				Number of people doing comparison
-				<input id="testerNum" type="range" min="1" max="50" step="1" value="1" oninput="document.getElementById('tesShow').innerHTML=this.value;" style="width: 50%;">
-        		<span id="tesShow">1</span>
-                <br>
-
+				<table class="breadcrumb mb-4">
+					<tr>
+						<td>Number of items to compare</td>
+						<td>
+							<input id="subjectNum" type="range" min="2" max="10" step="1" value="1" oninput="document.getElementById('subShow').innerHTML=this.value;">
+							<span id="subShow">2</span>
+						</td>
+					</tr>
+			
+					<tr>
+						<td>Number of people doing comparison</td>
+						<td>
+							<input id="testerNum" type="range" min="1" max="20" step="1" value="1" oninput="document.getElementById('tesShow').innerHTML=this.value;">
+							<span id="tesShow">1</span>
+						</td>
+						
+					</tr>
+					
+				</table>
                 <button id = "step1" onclick="SubjectInput()">Create a project</button>
 			
 			</div>
