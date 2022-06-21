@@ -429,6 +429,7 @@
 			console.log(testerResult);
 			console.log(testerResultSum);
 			console.log(resultScreen);
+			console.log(subjectList.length);
 
 		}
 	
@@ -463,7 +464,7 @@
 		</script>
 		
 	</head>
-	<body>
+	<body style="font-size:1.2em;">
 		<div class="container-fluid px-4">
 			<p>
 				<h2 class="mt-4">Project Name</h2>
@@ -476,7 +477,7 @@
 					<tr>
 						<td>Number of items to compare</td>
 						<td>
-							<input id="subjectNum" type="range" min="2" max="10" step="1" value="1" oninput="document.getElementById('subShow').innerHTML=this.value;">
+							<input id="subjectNum" type="range" min="2" max="9" step="1" value="1" oninput="document.getElementById('subShow').innerHTML=this.value;">
 							<span id="subShow">2</span>
 						</td>
 					</tr>
@@ -484,7 +485,7 @@
 					<tr>
 						<td>Number of people doing comparison</td>
 						<td>
-							<input id="testerNum" type="range" min="1" max="20" step="1" value="1" oninput="document.getElementById('tesShow').innerHTML=this.value;">
+							<input id="testerNum" type="range" min="1" max="9" step="1" value="1" oninput="document.getElementById('tesShow').innerHTML=this.value;">
 							<span id="tesShow">1</span>
 						</td>
 						
@@ -508,11 +509,12 @@
 				<br>
 				<br>			
 
-				This web-based PCM is designed by <a href="https://www.linkedin.com/in/sungjin-kim-784805104" target="_blank"> S. Kim(Linkedin)</a> and S. Min, based on 'A software product for the pairwise comparison method of judgment quantification.'
+				This web-based PCM is designed by <a href="https://www.linkedin.com/in/sungjin-kim-784805104" target="_blank"> S. Kim(Linkedin)</a> and S. Min, is a modernized version of the original PCM software written by Bruce J. Bailey <a href="https://pdxscholar.library.pdx.edu/etm_studentprojects/569/" target="_blank">(LINK)</a>
 			</p>
 		
 			<p>
-				For more information, see: "A Software Product for the Pairwise Comparison Method of Judgment Quantification" by Bruce J. Bailey <a href="https://pdxscholar.library.pdx.edu/etm_studentprojects/569/" target="_blank">(LINK)</a>
+				The mathematics for the software was devised by Dundar F. Kocaolgu, for the measurement of subjective values via constant-sum comparison, who developed a Hierarchical Decision Model <a href="https://ieeexplore.ieee.org/document/6448602" target="_blank">(LINK)</a>
+				
 			</p>
 			
 			</div>
